@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Support for Bülowius Photos, an independent macOS app for a personal OneDrive library.">
+<title>Support | Bülowius Photos</title>
+<style>
+:root { color-scheme: light dark; }
+body { margin: 0; font: 17px/1.6 system-ui, sans-serif; background: Canvas; color: CanvasText; }
+header, main, footer { max-width: 50rem; margin: 0 auto; padding: 1.5rem; }
+header, footer { font-size: 0.95rem; }
+nav { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+a { color: LinkText; text-underline-offset: 0.15em; }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+h1 { font-size: 2rem; line-height: 1.25; }
+h2 { font-size: 1.3rem; line-height: 1.35; margin-top: 2rem; }
+code { font-size: 0.95em; overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<header><nav aria-label="Site"><a href="./">Bülowius Photos</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav></header>
+<main>
+<h1>Bülowius Photos support</h1>
+<p>Bülowius Photos requires macOS 13 or later and a personal Microsoft account with OneDrive. Microsoft work and school accounts are not supported by this release. Customers sign in with Microsoft; they do not create an app registration or enter a client secret. The app is independent and is not endorsed by Microsoft or Apple.</p>
+<h2>Connect and refresh</h2>
+<p>Choose Sign in with Microsoft, then select your personal account. Browsing requests <code>User.Read</code> and <code>Files.Read</code>. If Microsoft says your session needs attention, sign out and sign in again. Use Refresh to reload the library and cloud albums. Opening cloud originals or refreshing requires internet access; items kept downloaded can be opened offline.</p>
+<h2>Organize and edit</h2>
+<p>Browse photos and videos, use cloud albums, or make local smart albums and folders. Favorites, hidden status, captions, keywords, local album arrangement, photo adjustments, and video trims stay on this Mac. Originals in OneDrive are changed only by an explicit cloud operation. Text indexing and duplicate checking can download originals and use extra storage; recognition and file comparison run locally.</p>
+<p>Hidden and Recently Deleted views use Touch ID or your Mac password. Their display protection does not encrypt local files. Keep backups of important media; Recently Deleted is not a backup or a complete browser for Microsoft's recycle bin.</p>
+<h2>Upload, delete, restore, and share</h2>
+<p>Enable OneDrive changes to upload files, edit cloud albums, create sharing links, or move originals to the recycle bin. Microsoft requests <code>Files.ReadWrite</code>. Restoring a cloud-deleted file requests <code>Files.ReadWrite.All</code> separately. Removing a file from an album keeps the original; moving an original to the recycle bin affects OneDrive and other clients.</p>
+<p>Use Transfers to review progress and retry an interrupted supported transfer. Failed uploads retain a staged local copy for retry. Clearing completed or cancelled transfers removes retained cancelled upload copies. A OneDrive sharing link is an anonymous view link; manage or revoke it in OneDrive. Export settings control saved edits and metadata; an unmodified original retains its metadata. The macOS sharing picker sends files to the service you choose.</p>
+<h2>Manage storage</h2>
+<p>Keep Downloaded stores originals in app storage. Free Up Space removes downloaded copies without deleting OneDrive content. Turning off Keep whole library downloaded does not remove existing downloads. Free Preview Cache removes thumbnails, which can download again.</p>
+<p>Sign Out keeps the local library. While signed in, Remove Local Data deletes the account's local library and text index, local edits and organization, thumbnails, originals, transfer records, staged uploads, and account-specific temporary export and sharing files. Exported files in a folder you chose, content already sent to another service, and cloud files remain. Earlier shared-cache files, unscoped sharing copies, and app-wide preferences may remain. See the <a href="https://mbuelowius.github.io/OneDrivePhotos-support/privacy.html">privacy policy</a>.</p>
+<h2>Report a problem</h2>
+<p>Open a <a href="https://github.com/MBuelowius/OneDrivePhotos-support/issues">public support issue</a> with the macOS version, app version, the action that failed, and the visible error. Check text and screenshots before posting. Do not include account details, credentials, signed URLs, private file names, recognized text, locations, or personal media. No experimental People feature is included in the store release.</p>
+</main>
+<footer>Developed by Maximilian Bülowius. Independent of Microsoft and Apple.</footer>
+</body>
+</html>
