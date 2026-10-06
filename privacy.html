@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Privacy policy for Bülowius Photos, an independent macOS app for a personal OneDrive library.">
+<title>Privacy policy | Bülowius Photos</title>
+<style>
+:root { color-scheme: light dark; }
+body { margin: 0; font: 17px/1.6 system-ui, sans-serif; background: Canvas; color: CanvasText; }
+header, main, footer { max-width: 50rem; margin: 0 auto; padding: 1.5rem; }
+header, footer { font-size: 0.95rem; }
+nav { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+a { color: LinkText; text-underline-offset: 0.15em; }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+h1 { font-size: 2rem; line-height: 1.25; }
+h2 { font-size: 1.3rem; line-height: 1.35; margin-top: 2rem; }
+code { font-size: 0.95em; overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<header><nav aria-label="Site"><a href="./">Bülowius Photos</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav></header>
+<main>
+<h1>Bülowius Photos privacy policy</h1>
+<p>Updated 6 October 2026.</p>
+<p>Bülowius Photos is an independent macOS application developed by Maximilian Bülowius. It is not endorsed by Microsoft or Apple. It connects to the personal Microsoft account you choose to browse and manage media in OneDrive. The app does not create a separate app account.</p>
+<h2>Microsoft sign-in and cloud access</h2>
+<p>The app uses Microsoft Authentication Library (MSAL) and Microsoft Graph. Microsoft handles sign-in, account recovery, and consent under the <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>. The app receives account identifiers, a username that may be an email address, and tokens needed to access your selected account. MSAL stores authentication state in the system credential store. The publisher does not receive your password or tokens.</p>
+<p>Authentication requests go to Microsoft and include information needed for sign-in and security, such as client and SDK versions, request identifiers, and authentication diagnostics. Microsoft may request additional account or verification information in its sign-in screens. The app has no publisher-operated backend, advertising SDK, developer analytics service, subscription service, or licensing service.</p>
+<p>Browsing requests <code>User.Read</code> and <code>Files.Read</code>. Uploads, cloud album changes, sharing links, and moving cloud originals to the recycle bin request <code>Files.ReadWrite</code> when you enable changes. Restoring a cloud-deleted file requests <code>Files.ReadWrite.All</code> separately. Microsoft may retain previously granted consent after you sign out; manage that consent in your Microsoft account settings.</p>
+<h2>Media and local analysis</h2>
+<p>The app reads OneDrive file names, identifiers, paths, dates, sizes, camera and location metadata, cloud album membership, thumbnails, and originals needed for viewing, analysis, export, or offline downloads. Files you import or paste are uploaded to the OneDrive destination you choose. These requests go to Microsoft Graph and Microsoft-provided media or upload endpoints.</p>
+<p>Text recognition uses Apple's Vision framework on this Mac. Indexing photos may download originals, recognize visible text, and save the text in the account's local library for search. Duplicate checking downloads candidate originals as needed and computes file hashes locally. The app does not upload the text index or duplicate hashes to a publisher service.</p>
+<p>Favorites, hidden status, captions, keywords, adjusted dates, place labels, smart albums, album folders, custom album order and covers, photo adjustment recipes, and video trim recipes are saved locally. These local changes do not update the OneDrive original. Exported or shared files may include saved edits and any metadata you choose to retain.</p>
+<h2>Places and location information</h2>
+<p>Places uses coordinates embedded in your media or provided by OneDrive. The app does not request your Mac's current location. Grouping media by location happens locally. Opening Places loads maps through Apple MapKit; requests can convey the viewed map area to Apple under <a href="https://www.apple.com/legal/privacy/data/en/apple-maps/">Apple's Maps privacy information</a>. Photo annotations are displayed locally rather than uploaded by the app to Apple.</p>
+<p>Uploads of original files preserve embedded metadata, which may include GPS coordinates. Export offers controls for photo details and location or video metadata; exporting an unmodified original retains its original metadata. Review those controls before sending a file to someone else.</p>
+<h2>Sharing and deletion</h2>
+<p>The macOS sharing picker passes prepared files to the service you select. Its privacy and retention rules apply. Creating a OneDrive sharing link requests an anonymous view link from Microsoft; anyone who obtains that link may be able to view the file. Manage or revoke cloud sharing permissions in OneDrive.</p>
+<p>Removing an item from a cloud album changes membership without deleting the original. Moving a cloud original to the recycle bin changes OneDrive and can affect other clients or shared access. Restoration depends on Microsoft permissions and whether OneDrive still retains the file. The app's local Recently Deleted records are not a replacement for Microsoft's recycle bin or a backup.</p>
+<h2>Local storage and retention</h2>
+<p>Library metadata, recognized text, local organization and edits, thumbnails, downloaded originals, transfer history, and retained upload files are stored in account-specific app storage. Interrupted uploads may retain a staged copy, destination, progress, and a temporary Microsoft upload-session URL for retry. Successful uploads remove staged copies; cancelled copies are removed when you clear completed or cancelled transfers. Failed transfers and staged files may remain until you retry or remove local data.</p>
+<p>Preview and unpinned-original caches are bounded and may be evicted. Keep Downloaded originals remain until you free their space or remove local data. Temporary export and sharing copies older than 24 hours are eligible for cleanup when the app starts or prepares more files; this is not an exact-time deletion promise. Preferences, including automatic refresh, launch at login, and the upload destination, are stored locally in macOS preferences.</p>
+<p>Hidden and Recently Deleted views use Touch ID or your Mac password through macOS LocalAuthentication and relock when appropriate. The app does not receive your fingerprint or Mac password. This protects the app's view of those collections; it does not encrypt stored photos, videos, or the local text index. Local media files are protected by the app sandbox and your Mac's file access controls.</p>
+<p>Sign Out removes the selected MSAL account from the app's credential cache and clears the visible library. It does not delete retained local data or OneDrive files. While signed in, Settings &gt; Remove Local Data deletes that account's local library, text index, local edits and organization, thumbnails, originals, transfer records, staged uploads, and account-specific temporary export and sharing copies. It does not delete OneDrive content, files exported to a folder you chose, files already passed to a sharing service, app-wide preferences, or another account's data. Earlier builds used a shared cache and unscoped sharing copies; those older files may remain in the app container outside the account-specific removal action.</p>
+<h2>Support and third-party services</h2>
+<p>The publisher does not sell your data or use the app for advertising or cross-app tracking. Microsoft, Apple, and the sharing service you select process requests under their own terms and privacy policies. Public support pages and issues are hosted by GitHub, which processes website access and anything you submit under the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+<p>For general support or privacy questions, visit the <a href="https://mbuelowius.github.io/OneDrivePhotos-support/support.html">support page</a>. Public issues are visible to others. Do not post account identifiers, passwords, tokens, signed media or upload URLs, private file names, recognized text, precise locations, or personal media. Use Microsoft account and OneDrive controls for cloud data and consent; use the app's local-data controls for data on this Mac.</p>
+<h2>Development builds</h2>
+<p>The Mac App Store build does not include the experimental People feature or its private Microsoft web-endpoint integration. Debug development builds may include separate Microsoft web sign-in in a nonpersistent WebKit session to read face-group names, face thumbnails, and matching-media identifiers. That experiment is outside the store release, may fail when Microsoft changes its web services, and requires separate testing and disclosure before any future release.</p>
+</main>
+<footer>Developed by Maximilian Bülowius. Independent of Microsoft and Apple.</footer>
+</body>
+</html>
